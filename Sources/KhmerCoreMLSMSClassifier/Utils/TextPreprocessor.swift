@@ -1,9 +1,9 @@
 import Foundation
 
-internal class TextPreprocessor {
+public class TextPreprocessor {
     private static let khmerCharacterRange = 0x1780...0x17FF as ClosedRange<UInt32>
 
-    internal static func normalizeKhmerText(_ text: String) -> String {
+    public static func normalizeKhmerText(_ text: String) -> String {
         var normalized = text.trimmingCharacters(in: .whitespacesAndNewlines)
         normalized = normalized.replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression)
         

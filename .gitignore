@@ -46,3 +46,18 @@ Pods/
 
 # Carthage
 Carthage/Build/
+
+# Example project specifics
+Examples/**/build/
+Examples/**/DerivedData/
+Examples/**/*.xcuserstate
+Examples/**/*.xcworkspace/xcuserdata/
+Examples/**/*.xcodeproj/xcuserdata/
+Examples/**/fastlane/report.xml
+Examples/**/fastlane/Preview.html
+Examples/**/fastlane/screenshots/**/*.png
+Examples/**/fastlane/test_output
+Examples/**/.env
+
+# Generated files for Examples
+Examples/**/Generated/

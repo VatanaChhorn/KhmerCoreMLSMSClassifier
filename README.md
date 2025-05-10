@@ -90,6 +90,24 @@ print(normalizedText)
 // Output: "ពេលនេះ លោកអ្នកទទួលបានប្រាក់ ១០០ សូមចុចតំណរភ្ជាប់ដើម្បីទទួលយកប្រាក់ https://example.com/claim"
 ```
 
+## iOS Example App
+
+An iOS example application is included in the `Examples` directory that demonstrates all the features of the package:
+
+### Example App Features
+
+- **Basic Classification**: Simple classification of Khmer SMS messages
+- **Detailed Classification**: Visualization of classification with confidence scores
+- **Text Preprocessing**: Demonstration of Khmer text normalization with highlighted changes
+
+### Running the Example
+
+1. Open `Examples/KhmerCoreMLSMSClassifierExample/KhmerCoreMLSMSClassifierExample.xcodeproj` in Xcode
+2. Select your iOS device or simulator
+3. Build and run the project
+
+For more details, see the [Example App README](Examples/KhmerCoreMLSMSClassifierExample/README.md).
+
 ## Architecture
 
 The package is organized into a modular structure:
@@ -103,9 +121,9 @@ Sources/
     └── Resources/       # CoreML model files
 ```
 
-## Running the Demo
+## Running the Console Demo
 
-The package includes a demo application that demonstrates the classifier in action:
+The package also includes a command-line demo application:
 
 ```bash
 swift run KhmerCoreMLSMSClassifierDemo
