@@ -8,7 +8,8 @@ class BasicClassificationViewModel: ObservableObject {
     func classifyMessage(_ message: String) {
         guard !message.isEmpty else { return }
         
-        let category = classifier.classify(message: message)
-        result = category.rawValue
+        if let category = try? classifier.classify(message: message) {
+            result = category.rawValue
+        }
     }
 } 

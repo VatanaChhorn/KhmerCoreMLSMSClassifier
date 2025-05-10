@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35004F3A2DCF6FA500BD69C9 /* KhmerCoreMLSMSClassifier in Frameworks */ = {isa = PBXBuildFile; productRef = 35004F392DCF6FA500BD69C9 /* KhmerCoreMLSMSClassifier */; };
+		35004F972DCFA68900BD69C9 /* KhmerCoreMLSMSClassifier in Frameworks */ = {isa = PBXBuildFile; productRef = 35004F962DCFA68900BD69C9 /* KhmerCoreMLSMSClassifier */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35004F3A2DCF6FA500BD69C9 /* KhmerCoreMLSMSClassifier in Frameworks */,
+				35004F972DCFA68900BD69C9 /* KhmerCoreMLSMSClassifier in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +70,7 @@
 			);
 			name = KhmerCoreMLSMSClassifierExample;
 			packageProductDependencies = (
-				35004F392DCF6FA500BD69C9 /* KhmerCoreMLSMSClassifier */,
+				35004F962DCFA68900BD69C9 /* KhmerCoreMLSMSClassifier */,
 			);
 			productName = KhmerCoreMLSMSClassifierExample;
 			productReference = 35004F282DCF6F2700BD69C9 /* KhmerCoreMLSMSClassifierExample.app */;
@@ -101,7 +101,7 @@
 			mainGroup = 35004F1F2DCF6F2700BD69C9;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				35004F382DCF6FA500BD69C9 /* XCRemoteSwiftPackageReference "KhmerCoreMLSMSClassifier" */,
+				35004F952DCFA68900BD69C9 /* XCLocalSwiftPackageReference "../../../KhmerCoreMLSMSClassifier" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 35004F292DCF6F2700BD69C9 /* Products */;
@@ -334,21 +334,16 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		35004F382DCF6FA500BD69C9 /* XCRemoteSwiftPackageReference "KhmerCoreMLSMSClassifier" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/vatanachhorn/KhmerCoreMLSMSClassifier.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		35004F952DCFA68900BD69C9 /* XCLocalSwiftPackageReference "../../../KhmerCoreMLSMSClassifier" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../../KhmerCoreMLSMSClassifier;
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		35004F392DCF6FA500BD69C9 /* KhmerCoreMLSMSClassifier */ = {
+		35004F962DCFA68900BD69C9 /* KhmerCoreMLSMSClassifier */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 35004F382DCF6FA500BD69C9 /* XCRemoteSwiftPackageReference "KhmerCoreMLSMSClassifier" */;
 			productName = KhmerCoreMLSMSClassifier;
 		};
 /* End XCSwiftPackageProductDependency section */

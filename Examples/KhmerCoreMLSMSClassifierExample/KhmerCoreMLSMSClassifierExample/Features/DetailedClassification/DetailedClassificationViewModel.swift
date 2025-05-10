@@ -13,15 +13,18 @@ class DetailedClassificationViewModel: ObservableObject {
     func getDetailedClassification(message: String) {
         guard !message.isEmpty else { return }
         
-        let detailedResult = classifier.getDetailedClassification(message: message)
-        result = ClassificationResult(
-            category: detailedResult.category.rawValue,
-            confidence: detailedResult.confidence
-        )
-        
-        let confidences = classifier.classifyWithConfidence(message: message)
-        allConfidences = confidences.reduce(into: [:]) { result, item in
-            result[item.key.rawValue] = item.value
+        if let detailedResult = try? classifier.getDetailedClassification(message: message) {
+            result = ClassificationResult(
+                category: detailedResult.category.rawValue,
+                confidence: detailedResult.confidence
+            )
         }
+        
+        if let confidences = try? classifier.classifyWithConfidence(message: message) {
+            allConfidences = confidences.reduce(into: [:]) { result, item in
+                result[item.key.rawValue] = item.value
+            }
+        }
+        
     }
 } 
