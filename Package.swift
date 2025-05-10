@@ -18,6 +18,8 @@ let package = Package(
     targets: [
         .target(
             name: "KhmerCoreMLSMSClassifier",
+            path: "Sources/KhmerCoreMLSMSClassifier",
+            exclude: ["Examples"],
             resources: [
                 .copy("Resources/kh-sms-classifier.mlmodelc"),
             ]),
