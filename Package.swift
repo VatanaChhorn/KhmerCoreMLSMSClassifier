@@ -13,9 +13,6 @@ let package = Package(
         .library(
             name: "KhmerCoreMLSMSClassifier",
             targets: ["KhmerCoreMLSMSClassifier"]),
-        .executable(
-            name: "KhmerCoreMLSMSClassifierDemo",
-            targets: ["KhmerCoreMLSMSClassifierExe"]),
     ],
     dependencies: [],
     targets: [
@@ -24,9 +21,6 @@ let package = Package(
             resources: [
                 .copy("Resources/kh-sms-classifier.mlmodelc"),
             ]),
-        .executableTarget(
-            name: "KhmerCoreMLSMSClassifierExe",
-            dependencies: ["KhmerCoreMLSMSClassifier"]),
         .testTarget(
             name: "KhmerCoreMLSMSClassifierTests",
             dependencies: ["KhmerCoreMLSMSClassifier"]
