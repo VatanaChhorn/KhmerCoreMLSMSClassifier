@@ -28,28 +28,35 @@ struct DetailedClassificationView: View {
                 
                 messageInputSection
                 
-                presetMessagesSection
-                
                 if viewModel.hasResult {
                     resultSection
                 }
+                
+                presetMessagesSection
             }
             .padding()
         }
         .navigationTitle("Detailed Classification")
-        .background(Color(.systemGroupedBackground))
+        .background(
+            LinearGradient(
+                gradient: Gradient(colors: [Color("BackgroundColor").opacity(0.1), Color("BackgroundColor").opacity(0.05)]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .ignoresSafeArea()
+        )
     }
     
     private var headerView: some View {
         VStack(spacing: 12) {
             ZStack {
                 Circle()
-                    .fill(Color.purple.opacity(0.2))
+                    .fill(Color("AccentColor").opacity(0.2))
                     .frame(width: 100, height: 100)
                 
                 Image(systemName: "chart.bar.fill")
                     .font(.system(size: 50))
-                    .foregroundColor(.purple)
+                    .foregroundColor(Color("AccentColor"))
                     .symbolEffect(.variableColor, options: .repeating, value: isAnimating)
                     .onAppear {
                         isAnimating = true
@@ -83,7 +90,7 @@ struct DetailedClassificationView: View {
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
-                        .stroke(Color.purple.opacity(0.3), lineWidth: 1)
+                        .stroke(Color("AccentColor").opacity(0.3), lineWidth: 1)
                 )
             
             Button {
@@ -95,7 +102,7 @@ struct DetailedClassificationView: View {
                     .padding()
                     .background(
                         RoundedRectangle(cornerRadius: 12)
-                            .fill(Color.purple)
+                            .fill(Color("AccentColor"))
                     )
                     .foregroundColor(.white)
             }

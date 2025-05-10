@@ -38,19 +38,26 @@ struct TextPreprocessingView: View {
             .padding()
         }
         .navigationTitle("Text Preprocessing")
-        .background(Color(.systemGroupedBackground))
+        .background(
+            LinearGradient(
+                gradient: Gradient(colors: [Color("BackgroundColor").opacity(0.1), Color("BackgroundColor").opacity(0.05)]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .ignoresSafeArea()
+        )
     }
     
     private var headerView: some View {
         VStack(spacing: 12) {
             ZStack {
                 Circle()
-                    .fill(Color.purple.opacity(0.2))
+                    .fill(Color("AccentColor").opacity(0.2))
                     .frame(width: 100, height: 100)
                 
                 Image(systemName: "character.textbox")
                     .font(.system(size: 46))
-                    .foregroundColor(.purple)
+                    .foregroundColor(Color("AccentColor"))
                     .padding()
                     .rotationEffect(.degrees(isAnimating ? 5 : -5))
                     .onAppear {
@@ -87,7 +94,7 @@ struct TextPreprocessingView: View {
                     }
                 }
                 .font(.subheadline)
-                .foregroundColor(.purple)
+                .foregroundColor(Color("AccentColor"))
                 .opacity(inputText.isEmpty ? 0.5 : 1.0)
                 .disabled(inputText.isEmpty)
             }
@@ -102,7 +109,7 @@ struct TextPreprocessingView: View {
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
-                        .stroke(Color.purple.opacity(isEditingInput ? 0.6 : 0.3), lineWidth: isEditingInput ? 2 : 1)
+                        .stroke(Color("AccentColor").opacity(isEditingInput ? 0.6 : 0.3), lineWidth: isEditingInput ? 2 : 1)
                 )
                 .onTapGesture {
                     isEditingInput = true
@@ -124,7 +131,7 @@ struct TextPreprocessingView: View {
                     .padding()
                     .background(
                         RoundedRectangle(cornerRadius: 12)
-                            .fill(Color.purple)
+                            .fill(Color("AccentColor"))
                     )
                     .foregroundColor(.white)
             }
@@ -155,7 +162,7 @@ struct TextPreprocessingView: View {
                     .padding(.vertical, 4)
                     .background(
                         Capsule()
-                            .fill(Color.purple.opacity(0.1))
+                            .fill(Color("AccentColor").opacity(0.1))
                     )
             }
             .padding(.horizontal, 5)
@@ -178,7 +185,7 @@ struct TextPreprocessingView: View {
                         ForEach(viewModel.differences, id: \.self) { difference in
                             HStack {
                                 Image(systemName: "checkmark.circle.fill")
-                                    .foregroundColor(.green)
+                                    .foregroundColor(Color("AccentColor"))
                                     .font(.system(size: 12))
                                 
                                 Text(difference)
@@ -198,7 +205,6 @@ struct TextPreprocessingView: View {
                 .fill(Color(.systemBackground))
                 .shadow(color: Color.black.opacity(0.05), radius: 10, x: 0, y: 5)
         )
-        .transition(.move(edge: .bottom).combined(with: .opacity))
     }
     
     private var examplesSection: some View {

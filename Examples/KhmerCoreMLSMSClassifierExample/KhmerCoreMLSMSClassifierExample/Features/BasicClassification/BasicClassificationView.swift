@@ -19,27 +19,34 @@ struct BasicClassificationView: View {
                 
                 messageInputSection
                 
-                presetMessagesSection
-                
                 if !viewModel.result.isEmpty {
                     resultView
                 }
+                
+                presetMessagesSection
             }
             .padding()
         }
         .navigationTitle("Basic Classification")
-        .background(Color(.systemGroupedBackground))
+        .background(
+            LinearGradient(
+                gradient: Gradient(colors: [Color("BackgroundColor").opacity(0.1), Color("BackgroundColor").opacity(0.05)]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .ignoresSafeArea()
+        )
     }
     
     private var headerView: some View {
         VStack(spacing: 12) {
             Image(systemName: "text.bubble.fill")
                 .font(.system(size: 50))
-                .foregroundColor(.purple)
+                .foregroundColor(Color("AccentColor"))
                 .padding()
                 .background(
                     Circle()
-                        .fill(Color.purple.opacity(0.2))
+                        .fill(Color("AccentColor").opacity(0.2))
                         .frame(width: 100, height: 100)
                 )
                 .scaleEffect(isAnimating ? 1.1 : 1.0)
@@ -76,7 +83,7 @@ struct BasicClassificationView: View {
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
-                        .stroke(Color.purple.opacity(0.3), lineWidth: 1)
+                        .stroke(Color("AccentColor").opacity(0.3), lineWidth: 1)
                 )
             
             Button {
@@ -88,7 +95,7 @@ struct BasicClassificationView: View {
                     .padding()
                     .background(
                         RoundedRectangle(cornerRadius: 12)
-                            .fill(Color.purple)
+                            .fill(Color("AccentColor"))
                     )
                     .foregroundColor(.white)
             }
