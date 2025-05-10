@@ -1,0 +1,57 @@
+[
+  {
+    "metadataOutputVersion" : "3.0",
+    "outputSchema" : [
+      {
+        "isOptional" : "0",
+        "formattedType" : "String",
+        "type" : "String",
+        "name" : "label",
+        "shortDescription" : "Text label"
+      }
+    ],
+    "modelParameters" : [
+
+    ],
+    "author" : "Vatana Chhorn",
+    "specificationVersion" : 3,
+    "isUpdatable" : "0",
+    "stateSchema" : [
+
+    ],
+    "availability" : {
+      "macOS" : "10.14",
+      "tvOS" : "12.0",
+      "visionOS" : "1.0",
+      "watchOS" : "5.0",
+      "iOS" : "12.0",
+      "macCatalyst" : "12.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_textClassifier"
+    },
+    "inputSchema" : [
+      {
+        "isOptional" : "0",
+        "formattedType" : "String",
+        "type" : "String",
+        "name" : "text",
+        "shortDescription" : "Input text"
+      }
+    ],
+    "classLabels" : [
+      "Spam",
+      "Ham"
+    ],
+    "generatedClassName" : "kh_sms_classifier",
+    "userDefinedMetadata" : {
+      "com.apple.createml.training.finished" : "2025-05-10T07:46:50Z",
+      "com.apple.createml.app.tag" : "151.2",
+      "com.apple.createml.model.created" : "2025-05-10T07:46:50Z",
+      "com.apple.coreml.model.preview.type" : "textClassifier",
+      "com.apple.createml.app.version" : "6.2",
+      "com.apple.createml.training.started" : "2025-05-10T07:46:50Z"
+    },
+    "method" : "predict"
+  }
+]
